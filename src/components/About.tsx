@@ -34,7 +34,8 @@ const About = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Revolucionamos el cuidado de tu auto con el método Rinseless Wash, 
-            la técnica premium utilizada por profesionales en Estados Unidos
+            la técnica premium utilizada por profesionales en Estados Unidos, 
+            ahora en Argentina
           </p>
         </div>
         

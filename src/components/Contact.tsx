@@ -20,7 +20,7 @@ const Contact = () => {
     
     const whatsappMessage = `Hola! Me gustaría coordinar un turno.%0A%0ANombre: ${formData.name}%0ATeléfono: ${formData.phone}%0ABarrio: ${formData.neighborhood}%0AMensaje: ${formData.message}`;
     
-    window.open(`https://wa.me/5491112345678?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/5491138184058?text=${whatsappMessage}`, '_blank');
     
     toast({
       title: "¡Mensaje enviado!",
@@ -78,7 +78,7 @@ const Contact = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="11 1234-5678"
+                  placeholder="11 3818-4058"
                   required
                   className="bg-background border-input"
                 />
@@ -131,8 +131,8 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-1 text-card-foreground">Teléfono</h3>
-                <a href="tel:+5491112345678" className="text-muted-foreground hover:text-primary transition-smooth">
-                  +54 9 11 1234-5678
+                <a href="tel:+5491138184058" className="text-muted-foreground hover:text-primary transition-smooth">
+                  +54 9 11 3818-4058
                 </a>
               </div>
             </Card>
@@ -168,12 +168,12 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold text-lg mb-1 text-card-foreground">Instagram</h3>
                 <a 
-                  href="https://instagram.com/supracarwash" 
+                  href="https://instagram.com/supracarwashok" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-smooth"
                 >
-                  @supracarwash
+                  @supracarwashok
                 </a>
               </div>
             </Card>

@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
-import supraLogo from "@/assets/supra-logo.jpeg";
+import supraLogo from "@/assets/supra-solo-logo.png";
 import heroImage from "@/assets/hero-carwash.jpg";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
+    document.getElementById('message').textContent= 'Hola! Quiero reservar un turno... ';
     document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
   };
+
 
   return (
     <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -14,20 +16,19 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/30" />
       </div>
-      
       <div className="relative z-10 container mx-auto px-4 text-center">
         <img 
           src={supraLogo} 
           alt="Supra Car Wash Logo" 
-          className="w-48 h-48 md:w-64 md:h-64 mx-auto mb-8 animate-fade-in"
+          className="w-70 h-40  mx-auto mb-4 animate-fade-in"
         />
-        
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 animate-fade-in-up">
-          Lavado Premium a Domicilio
-        </h1>
-        
+       
+        <h2 className="text-center text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up">
+        <p> Tu auto impecable <br />
+        <span className="text-primary"> sin salir de casa</span> </p>
+        </h2>
         <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto animate-fade-in-up">
           Servicio exclusivo en barrios privados
         </p>

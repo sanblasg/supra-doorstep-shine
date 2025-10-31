@@ -1,99 +1,109 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
     vehicleType: "Auto",
     basic: {
-      price: "$15.000",
+      price: "$20.000",
       features: [
-        "Lavado exterior completo",
-        "Limpieza de llantas",
-        "Secado y terminación",
-        "Productos rinseless premium"
+        "Lavado exterior completo sin enjuague *",
+        "Limpieza de llantas, cubiertas y guardabarros",
+        "Limpieza de vidrios, espejos y faros",
+        "Limpieza de marcos y bordes de puertas",
+        "Secado manual con microfibras premium"
       ]
     },
     premium: {
-      price: "$25.000",
+      price: "$45.000",
       features: [
         "Todo lo del básico",
         "Limpieza interior profunda",
         "Aspirado completo",
         "Limpieza de vidrios",
-        "Aromatización"
+        "Regalo sorpresa"
       ]
     }
   },
   {
     vehicleType: "SUV",
     basic: {
-      price: "$18.000",
+      price: "$25.000",
       features: [
-        "Lavado exterior completo",
-        "Limpieza de llantas",
-        "Secado y terminación",
-        "Productos rinseless premium"
+        "Lavado exterior completo sin enjuague *",
+        "Limpieza de llantas, cubiertas y guardabarros",
+        "Limpieza de vidrios, espejos y faros",
+        "Limpieza de marcos y bordes de puertas",
+        "Secado manual con microfibras premium"
       ]
     },
     premium: {
-      price: "$30.000",
+      price: "$55.000",
       features: [
         "Todo lo del básico",
         "Limpieza interior profunda",
         "Aspirado completo",
         "Limpieza de vidrios",
-        "Aromatización"
+        "Regalo sorpresa"
       ]
     }
   },
   {
     vehicleType: "Camioneta",
     basic: {
-      price: "$20.000",
+      price: "$30.000",
       features: [
-        "Lavado exterior completo",
-        "Limpieza de llantas",
-        "Secado y terminación",
-        "Productos rinseless premium"
+        "Lavado exterior completo sin enjuague *",
+        "Limpieza de llantas, cubiertas y guardabarros",
+        "Limpieza de vidrios, espejos y faros",
+        "Limpieza de marcos y bordes de puertas",
+        "Secado manual con microfibras premium"
       ]
     },
     premium: {
-      price: "$32.000",
+      price: "$65.000",
       features: [
         "Todo lo del básico",
         "Limpieza interior profunda",
         "Aspirado completo",
         "Limpieza de vidrios",
-        "Aromatización"
+        "Regalo sorpresa"
       ]
     }
   },
   {
     vehicleType: "Camioneta Grande",
     basic: {
-      price: "$23.000",
+      price: "$33.000",
       features: [
-        "Lavado exterior completo",
-        "Limpieza de llantas",
-        "Secado y terminación",
-        "Productos rinseless premium"
+        "Lavado exterior completo sin enjuague *",
+        "Limpieza de llantas, cubiertas y guardabarros",
+        "Limpieza de vidrios, espejos y faros",
+        "Limpieza de marcos y bordes de puertas",
+        "Secado manual con microfibras premium"
       ]
     },
     premium: {
-      price: "$35.000",
+      price: "$71.000",
       features: [
         "Todo lo del básico",
         "Limpieza interior profunda",
         "Aspirado completo",
         "Limpieza de vidrios",
-        "Aromatización"
+        "Regalo sorpresa"
       ]
     }
   }
 ];
 
 const Services = () => {
+  const scrollToContact = (vehicleType: string) => {
+    document.getElementById('message').textContent= 'Hola! Quiero reservar turno para mi ' + vehicleType;
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="servicios" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -101,7 +111,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4">
             Nuestros <span className="text-primary">Servicios</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm text-muted-foreground max-w-1xl mx-auto">
             Elegí el plan perfecto para tu vehículo
           </p>
         </div>
@@ -109,20 +119,24 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div key={index} className="space-y-4">
+             
               <h3 className="text-2xl font-bold text-center text-foreground mb-4">
-                {service.vehicleType}
+                <Button 
+                size="lg"
+                onClick={() => scrollToContact(service.vehicleType)}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-white px-8 py-6 rounded-full shadow-premium transition-smooth hover:scale-105 animate-fade-in-up"
+              >
+               {service.vehicleType}
+ 
+              </Button>
               </h3>
               
               {/* Basic */}
               <Card className="p-6 border-2 border-border hover:shadow-card transition-smooth bg-card">
                 <Badge className="mb-3 bg-secondary text-secondary-foreground">
-                  Básico
+                  Exterior
                 </Badge>
-                <div className="mb-4">
-                  <span className="text-3xl font-extrabold text-primary">
-                    {service.basic.price}
-                  </span>
-                </div>
+                
                 <ul className="space-y-2">
                   {service.basic.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
@@ -141,11 +155,6 @@ const Services = () => {
                 <Badge className="mb-3 bg-primary text-primary-foreground">
                   Premium
                 </Badge>
-                <div className="mb-4">
-                  <span className="text-3xl font-extrabold text-primary">
-                    {service.premium.price}
-                  </span>
-                </div>
                 <ul className="space-y-2">
                   {service.premium.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
@@ -154,7 +163,9 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                
               </Card>
+              
             </div>
           ))}
         </div>
