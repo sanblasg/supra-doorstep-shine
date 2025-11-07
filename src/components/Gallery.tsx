@@ -24,7 +24,7 @@ const Gallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4">
-          Ahorrá tiempo con  <span className="text-primary">nuestro servicio </span>de lavado y detallado de autos
+          Ahorrá tiempo con nuestro servicio de <br/><span className="text-primary">Car Wash Premium </span> a domicilio
           </h2>
           <br/>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

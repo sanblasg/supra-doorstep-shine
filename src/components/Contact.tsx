@@ -20,7 +20,7 @@ const Contact = () => {
     
     const whatsappMessage = `Hola! Me gustaría coordinar un turno.%0A%0ANombre: ${formData.name}%0ATeléfono: ${formData.phone}%0ABarrio: ${formData.neighborhood}%0AMensaje: ${formData.message}`;
     
-    window.open(`https://wa.me/5491138184058?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/543484407811?text=${whatsappMessage}`, '_blank');
     
     toast({
       title: "¡Mensaje enviado!",
@@ -78,7 +78,7 @@ const Contact = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="11 3818-4058"
+                  placeholder="+54 9 348 440-7811"
                   required
                   className="bg-background border-input"
                 />
@@ -131,8 +131,8 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-1 text-card-foreground">Teléfono</h3>
-                <a href="tel:+5491138184058" className="text-muted-foreground hover:text-primary transition-smooth">
-                  +54 9 11 3818-4058
+                <a href="tel:+543484407811" className="text-muted-foreground hover:text-primary transition-smooth">
+                  +54 9 348 440-7811
                 </a>
               </div>
             </Card>
